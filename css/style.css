@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+:root
+{
+    --green: green;
+    --black: #130f40;               /*variable initialization--name taaki baar baar likhna na pare*/
+    --light_color: #666;      
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border: .1rem solid rgba(0,0,.1);
+    --outline:.1rem solid rgba(0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*padding and border are included in the width and height*/
+    text-decoration: none;
+    border: none;
+    outline: none;  /* In order to remove any outline after the outline*/
+    text-transform: capitalize; /* to capitalize every 1st letter of the word*/
+    transition: all .2s linear;  /*the elements cahnges after a certain duration*/
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;  /*The overflow-x property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges.*/
+    scroll-behavior: smooth; /*Add a smooth scrolling effect to the document taaki nav pe click kre aur smoothlu us position me pahuch jaae*/
+    scroll-padding-top: 7rem;  /*jab scroll kre to 7rem top ka space maintain rahe */
+}
+body{
+    background: #eee;
+}
+
+section
+{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.heading span{
+    background-color: var(--green);
+    color: #fff;
+    padding: .5rem 3rem;
+    display: inline-block;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0% 0%);   /*wo jo shape hai wo build krne ko ye function use kiya hai*/
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;  /*display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.display: inline-block does not add a line-break after the element, so the element can sit next to other elements.*/
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    border: .2rem solid var(--black);
+    border-radius: .5rem;
+    color: var(--black);
+    background: none;
+}
+.btn:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+
+
+.header{
+    border: 0px solid;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; /*lexbox layout, which provides an efficient way to arrange, align, and distribute elements within a container, even when their sizes are unknown or dynamic.*/
+    align-items: center;
+    justify-content: space-between;   /*all the content of header have proper space in between them*/
+    padding: 2rem 9%;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;      /*taaki header egdum aage rahe sara content uske peeche*/
+}
+
+.header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.header .logo i{
+    color: var(--green);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--green);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+}
+.header .icons div:hover{
+    background-color: var(--green);
+    color: white;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .navbar.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .search-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;   /*Content is clipped and no scrolling mechanism should be provided to view the content outside the clipping region.*/
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none; /*No capitalization. The text renders as it is. This is default*/
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+.header .search-form label:hover{
+    color: var(--green);
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    background-color: #fff;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;  /*gap between the three items trash image and quantity*/
+    position: relative;
+    margin: 1rem 0rem;
+}
+.header .shopping-cart .box img{
+    height: 10rem;
+}
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--light_color);
+    transform: translateY(-50%);    /*translate() method moves an element from its current position:*/
+}
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--green);
+}
+
+.header .shopping-cart .box .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.header .shopping-cart .box .content span{
+    color: var(--light_color);
+    font-size: 1.5rem;
+}
+.header .shopping-cart .box .content .quantity{   
+    padding-left: 1rem;
+}
+.header .shopping-cart .total{
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header .login-form{
+
+    position: absolute; 
+    top: 110%; 
+    right: -110%;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    text-align: center;
+    width: 35rem;
+}
+.header .login-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form .box{
+
+    margin: .7rem 0;
+    background-color: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light_color);
+}
+
+.header .login-form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+
+/*home start*/
+.home{
+    display: flex;
+    justify-content: center;
+    background: url(../image/banner-img.jpg) no-repeat ; /*background image will not be repeated*/
+    background-position: center;
+    background-size: cover;     /*jo img cut wat gya ho wo aaega like poora image dekhega*/
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+}
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3{
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.home .content h3 span{
+    color: var(--green);
+}
+
+.home .content p{
+    color: var(--light_color);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+/*home end*/
+
+/*feature start*/
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));      /*30rem width ka colum banana hai, 1fr matlab poore space se 1fraction*/
+    gap: 1.5rem;
+}
+
+.features .box-container .box{
+  
+    padding: 3rem 2rem;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;  /*outline ko -1 andar leke aao*/
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.features .box-container .box:hover{
+    box-shadow: 1px 1px 10px 4px green;
+}
+
+.features .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+
+.features .box-container .box h3{
+    font-size: 2.5rem;
+    line-height: 1.8;
+    color: var(--black);
+}
+.features .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--light_color);
+    padding: 1rem 0;
+}
+/*feature end*/
+
+/*product start*/
+.products .product-slider{
+  
+    padding: 1rem;
+}
+
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+}
+.products .product-slider .box{
+  
+    background-color: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+.products .product-slider .box:hover{
+    box-shadow: 1px 1px 10px 4px green;
+}
+.products .product-slider .box img{
+    height: 20rem;
+}
+.products .product-slider h1{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+.products .product-slider .box .price{
+    font-size: 2rem;
+    color: var(--light_color);
+    padding: .5rem 0;
+}
+.products .product-slider .box .stars i{
+    font-size: 1.7rem;
+    color: orange;
+    padding: .5rem 0;
+}
+/*product end*/
+
+/*categories start*/
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));      /*30rem width ka colum banana hai, 1fr matlab poore space se 1fraction*/
+    gap: 1.5rem;
+}
+
+.categories .box-container .box{
+    padding: 3rem 0;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;  
+    text-align: center;
+    box-shadow: var(--box-shadow); 
+    border-radius: .5rem;
+}
+.categories .box-container .box:hover{
+    box-shadow: 1px 1px 10px 4px green;
+}
+.categories .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.categories .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+.categories .box-container .box p{
+    font-size: 1.7rem;
+    color: var(--light_color);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+/*Categories end*/
+
+/*review start*/
+.review .review-slider{
+    padding: 1rem;
+}
+*
+.review .review-slider .box{
+    padding: 3rem 2rem;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;  
+    text-align: center;
+    box-shadow: var(--box-shadow); 
+    border-radius: .5rem;
+}
+.review .review-slider .box:hover{
+    box-shadow: 1px 1px 10px 4px green;
+}
+.review .review-slider .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+.review .review-slider .box p{
+    padding: 1rem 0;
+    line-height: 1.8;
+    color: var(--light_color);
+    font-size: 1.5rem;
+}
+.review .review-slider .box h3{
+    padding-bottom: .5rem;
+    color: var(--blog);
+    font-size: 2.2rem;
+}
+.review .review-slider .box .stars i{
+    color: orange;
+    font-size: 1.7rem;
+} 
+
+/*review end*/
+
+/*Blog start*/
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));      /*30rem width ka colum banana hai, 1fr matlab poore space se 1fraction*/
+    gap: 1.5rem;
+}
+.blogs .box-container .box{
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+}
+.blogs .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+.blogs .box-container .box .content{
+    padding: 2rem;
+}
+.blogs .box-container .box .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: var(--border);
+}
+.blogs .box-container .box .content .icons a{
+    color: var(--light_color);
+    font-size: 1.5rem;
+}
+.blogs .box-container .box .content .icons a:hover{
+    color: var(--black);
+}
+.blogs .box-container .box .content .icons i{
+    color: var(--green);
+    padding-right: .5rem;
+}
+.blogs .box-container .box .content h3{
+    line-height: 1.8;
+    color: var(--black);
+    font-size: 2.2rem;
+    padding: .5rem 0;
+}
+.blogs .box-container .box .content p{
+    line-height: 1.8;
+    color: var(--light_color);
+    font-size: 1.5rem;
+    padding: .5rem 0; 
+}
+
+/*Blog end*/
+
+/*Footer start*/
+.footer{
+    background-color: #fff;
+
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));      /*30rem width ka colum banana hai, 1fr matlab poore space se 1fraction*/
+    gap: 1.5rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+.footer .box-container .box h3 i{
+    color: var(--green);
+}
+.footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light_color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem;
+}
+.footer .box-container .box .links i{
+    color: var(--green);
+    padding-right: .5rem;
+}
+
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light_color);
+    padding: 1rem 0;
+}
+.footer .box-container .box .share a{
+    height: 4rem;
+    width: 5rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: .2rem;
+    background-color: #eee;
+    text-align: center;
+    
+}
+.footer .box-container .box .share a:hover{
+    background-color: var(--green);
+    color: #fff;
+}
+.footer .box-container .box .email{
+    margin: .7rem 0;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+}
+.footer .box-container .box .payment{
+    margin-top: 2rem;
+    height: 3rem;
+}
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border-top: var(--border);
+}
+.footer .credit span{
+    color: var(--green);
+}
+
+/*Footer ends*/
+
+/*Media Query*/
+@media (max-width: 991px)  
+{
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px)       /*Mobile devices. 481px — 768px*/
+{
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+    .header .navbar{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    background-color: #fff;
+    }
+    .header .navbar a
+    {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+}
+@media (max-width: 450px) 
+{ 
+    html{
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+}

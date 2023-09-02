@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grocery Store by Revati Raman</title>
+    <link rel="icon" type="image/icon" href="image/favicon.PNG">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> <!--Code for slider-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Inorder to make the website responsive , use the media query-->
+</head>
+<body>
+<!--Header section start-->
+ <header class="header">
+    <a href="#" class="logo"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Grocery</a>
+
+    <nav class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#Features">Features</a>
+        <a href="#Products">Products</a>
+        <a href="#Categories">Categories</a>
+        <a href="#Reviews">Reviews</a>
+        <a href="#Blogs">Blogs</a>
+    </nav>
+    <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <div class="fa fa-shopping-cart" id="cart-btn"></div>
+        <div class="fa fa-user" id="login-btn"></div>
+    </div>
+
+    <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here">    <!--placeholder jo search krne se pehle show krta , but jaise he type krenge gayab ho jaaega-->
+        <label for="search-box" class="fa fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fa fa-trash"></i>
+            <img src="image/cart-img-1.png" alt="">
+            <div class="content">
+                <h3>Watermelon</h3>
+                <span class="price">Rs. 98.50/-</span>
+                <span class="quantity">Qty : 1</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fa fa-trash"></i>
+            <img src="image/cart-img-2.png" alt="">
+            <div class="content">
+                <h3>Onion</h3>
+                <span class="price">Rs. 32.00/-</span>
+                <span class="quantity">Qty : 3</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fa fa-trash"></i>
+            <img src="image/cart-img-3.png" alt="">
+            <div class="content">
+                <h3>Chicken</h3>
+                <span class="price">Rs. 194.50/-</span>
+                <span class="quantity">Qty : 1</span>
+            </div>
+        </div>
+
+        <div class="total">total : Rs. 389.00/-</div>
+        <a href="#" class="btn">Checkout</a>
+    </div>
+
+    <form action="#" class="login-form">
+        <h3>LOGIN NOW</h3>
+        <input type="email" class="box" placeholder="Your email">
+        <input type="password" class="box" placeholder="Your password">
+        <p>Forget your password <a href="#">Click Here</a></p>
+        <p>Don't have an account<a href="#">Create Now</a></p>
+        <input type="submit" name="" id="" value="Login Now" class="btn">
+    </form>
+ </header>
+<!--Header section end-->
+
+<!--Banner section start-->
+<section class="home" id="Home">            <!--<section> tag means that the content inside relates to a single theme-->
+    <div class="content">
+        <h3>Fresh And <span>Organic</span> Products For You</h3>
+        <p>This is a responsive website designed by Revati Raman using html, css and javascript. It is a device friendly website.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</section>
+<!--Banner section stop-->
+
+<!--Our feature section start-->
+<section class="features" id="Features">
+    <h1 class="heading">Our <span>Features</span></h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="image/feature-img-1.png" alt="">
+            <h3>Fresh and Organic</h3>
+            <p>Fresh organic vegetables and Natuoponic veggies online!. Nourish your body and soul with our farm-fresh, organic goodness.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="box">
+            <img src="image/feature-img-2.png" alt="">
+            <h3>Free Delivery</h3>
+            <p>Delivering Dreams, Zero Cost. Our gift to you: free delivery on every order. Unwrap happiness without the extra charge</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="box">
+            <img src="image/feature-img-3.png" alt="">
+            <h3>Easy Payment</h3>
+            <p>Seamless Transactions, Effortless Enjoyment. With our easy payment options, indulge in hassle-free shopping.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+<!--Our feature section stops-->
+
+<!--Our product section starts-->
+<section class="products" id="Products">
+    <h1 class="heading">Our <span>Products</span></h1>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/product-1.png" alt="">
+                <h1>Fresh Orange</h1>
+                <div class="price">Rs. 74.50/- - 92.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-2.png" alt="">
+                <h1>Fresh Onion</h1>
+                <div class="price">Rs. 32.50/- - 40.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-3.png" alt="">
+                <h1>Fresh Meat</h1>
+                <div class="price">Rs. 190.50/- - 222.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-4.png" alt="">
+                <h1>Fresh Cabbage</h1>
+                <div class="price">Rs. 34.50/- - 45.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="swiper product-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/product-5.png" alt="">
+                <h1>Fresh Poatato</h1>
+                <div class="price">Rs. 29.00/- - 35.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-6.png" alt="">
+                <h1>Fresh Avocado</h1>
+                <div class="price">Rs. 184.50/- - 212.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-7.png" alt="">
+                <h1>Fresh Carrot</h1>
+                <div class="price">Rs. 54.50/- - 72.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/product-8.png" alt="">
+                <h1>Fresh Lemon</h1>
+                <div class="price">Rs. 47.50/- - 67.00/-</div>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Our product section ends-->
+
+<!--Our Categories start here-->
+<section class="categories" id="Categories">
+    <h1 class="heading">Our <span>Categories</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="image/cat-1.png" alt="">
+            <h3>Vegetables</h3>
+            <p>Upto 45% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-2.png" alt="">
+            <h3>Fresh Fruits</h3>
+            <p>Upto 40% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-3.png" alt="">
+            <h3>Dairy Products</h3>
+            <p>Upto 30% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="box">
+            <img src="image/cat-4.png" alt="">
+            <h3>Fresh Meat</h3>
+            <p>Upto 25% Off</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </div>
+</section>
+<!--Our Categoies ends here-->
+<!--Our Review start here-->
+<section class="review" id="Reviews">
+    <h1 class="heading">Customer's <span>Reviews</span></h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <img src="image/my_img1.jpg" alt="">
+                <p>
+                    Fast delivery, fresh produce, excellent service. Convenient and user-friendly app. Satisfied customer, will shop again. Highly recommended for groceries.
+                </p>
+                <h3>Rahul Mehta</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/my_img2.jpg" alt="">
+                <p>
+                    Excellent service! Fast delivery, fresh produce, user-friendly app. Satisfied with variety and prices. Highly recommend for convenient grocery shopping
+                </p>
+                <h3>Shewta Tiwari</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/my_img3.jpg" alt="">
+                <p>
+                    Quick delivery, fresh produce, user-friendly app. Prices can be competitive. Overall, satisfied with convenience and selection. Recommended.
+                </p>
+                <h3>Saumya Singh</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/my_img4.jpg" alt="">
+                <p>
+                    Excellent website! Convenient browsing, quick checkout, wide variety. Enhanced my shopping experience. Recommend for hassle-free grocery shopping.
+                </p>
+                <h3>Vikram Ojha</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Our Review ends here-->
+
+
+<!--Our blog start here-->
+<section class="blogs" id="Blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="image/blog-1.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By Farhan</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 1st July, 2023</a>
+                </div>
+                <h3>The Vibrant World of Fresh Produce</h3>
+                <p>Fresh fruits and vegetables form the cornerstone of a healthy diet. We'll discuss the importance of seasonal eating, the benefits of consuming local produce, and the nutritional value of different fruits and vegetables.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/blog-2.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By Swati</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 21st July, 2023</a>
+                </div>
+                <h3>The Essence of Grocery Shopping</h3>
+                <p>Grocery shopping is a task that bridges the gap between sustenance and pleasure. It is a chore that brings us closer to nature as we pick fresh produce, and it's an adventure where we explore new flavors and cuisines. </p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="image/blog-3.jpg" alt="">
+            <div class="content">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-user"></i> By Karishma</a>
+                    <a href="#"><i class="fa fa-calendar"></i> 3rd August, 2023</a>
+                </div>
+                <h3>The Psychology of Grocery Shopping</h3>
+                <p>Grocery stores are designed to influence our buying behavior through marketing strategies. This section can explore the psychological aspects of grocery shopping  and the emotional connection we develop with certain products.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Our blog ends here-->
+<!--footer starts here-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Groco <i class="fa fa-shopping-basket"></i></h3>
+            <p>Feel free to follow us on our social media handlers. All the links are given below</p>
+            <div class="share">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="https://www.linkedin.com/in/revati-raman-7755a4244" class="fa fa-linkedin"></a>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <h3>Contact Info</i></h3>
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 9934060783</a>
+            <a href="#" class="links"><i class="fa fa-phone"></i> +91 9988776655</a>
+            <a href="#" class="links"><i class="fa fa-envelope"></i> revatiraman@gmail.com</a>
+            <a href="#" class="links"><i class="fa fa-map-marker"></i> Bangalore, India - 560098</a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</i></h3>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Home</a>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Features</a>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Products</a>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Categories</a>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Reviews</a>
+            <a href="#" class="links"><i class="fa fa-arrow-right"></i> Blogs</a>
+        </div>
+
+        <div class="box">
+            <h3>Newsletter</i></h3>
+            <p>Subscribe for latest updates</p>
+            <input type="email" placeholder="Your Email" class="email">
+            <input type="submit" value="Subscribe" class="btn">
+            <img src="image/payment.png" alt="" class="payment">
+        </div>
+
+
+    </div>
+
+    <div class="credit">Created by <span>Revati Raman</span> | All Rights Reserved</div>
+</section>
+<!--footer ends here-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> <!--Code for slider-->
+<script src="js/script.js"></script>
+</body>
+</html>
